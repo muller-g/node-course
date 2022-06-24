@@ -5,7 +5,7 @@ npm init -y
 ```
 # Packages necessary 
 ```
-npm install express nodemon mongoose
+npm install express nodemon mysql
 
 ```
 # Create script nodemon on package.json
@@ -32,5 +32,18 @@ app.get('/', (req, res) => {
 })
 
 app.listen(3000)
+
+```
+
+# Create connection with database
+```
+const mysql = require('mysql')
+
+const db = mysql.createPool({
+    host: "0000000",
+    user: "000",
+    password: "0000",
+    database: "0000",
+})
 
 ```
